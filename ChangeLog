@@ -1,3 +1,5 @@
+* Update Gentoo init script to try harder when stopping the service.
+
 2013-04-11 - 0.1.0
 * Cosmetic clean ups.
 * Split the module out into its own repository.

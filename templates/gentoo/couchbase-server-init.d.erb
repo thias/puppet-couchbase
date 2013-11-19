@@ -15,7 +15,7 @@ start() {
     /sbin/start-stop-daemon --start --pidfile "${PIDFILE}" \
         --user "couchbase" \
         --exec "${BASEDIR}/bin/couchbase-server" -- \
-        -noinput -detached
+        -- -noinput -detached
     eend $?
 }
 
@@ -24,7 +24,10 @@ stop() {
     start-stop-daemon --stop --quiet --pidfile "${PIDFILE}"
     # This epmd is a harmless leftover, "known bug" *sigh*
     start-stop-daemon --stop --quiet \
-        --exec /opt/couchbase/lib/erlang/erts-5.8.4/bin/epmd
+        --exec /opt/couchbase/lib/erlang/erts-*/bin/epmd
+    # Sometimes the above is still not enough... try more
+    start-stop-daemon --stop --quiet \
+        --exec /opt/couchbase/lib/erlang/erts-*/bin/beam.smp
     rm -f "${PIDFILE}"
     eend $?
 }
