@@ -1,3 +1,5 @@
+* Include facts for presence, version and release.
+
 #### 2013-12-10 - 0.1.1
 * Update Gentoo init script to try harder when stopping the service.
 * Update Gentoo conf file with @ variable prefix.
