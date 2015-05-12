@@ -1,4 +1,5 @@
 * Include facts for presence, version and release.
+* Replace Modulefile with metadata.json.
 
 #### 2013-12-10 - 0.1.1
 * Update Gentoo init script to try harder when stopping the service.
