@@ -4,7 +4,7 @@
 #
 class couchbase::install (
   $rpmbasename,
-  $rpmbaseurl
+  $rpmbaseurl,
 ) {
 
   if $::operatingsystem == 'Gentoo' {
@@ -37,7 +37,7 @@ class couchbase::install (
   } else {
 
     # This is the clean way
-    package { 'couchbase-server': ensure => installed }
+    package { 'couchbase-server': ensure => 'installed' }
 
   }
 

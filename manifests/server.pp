@@ -12,18 +12,18 @@
 class couchbase::server (
   $rpmbasename = $couchbase::params::rpmbasename,
   $rpmbaseurl  = $couchbase::params::rpmbaseurl
-) inherits couchbase::params {
+) inherits ::couchbase::params {
 
-  class { 'couchbase::install':
+  class { '::couchbase::install':
     rpmbasename => $rpmbasename,
     rpmbaseurl  => $rpmbaseurl,
   }
 
   service { 'couchbase-server':
+    ensure    => 'running',
     enable    => true,
-    ensure    => running,
     hasstatus => true,
-    require   => Class['couchbase::install'],
+    require   => Class['::couchbase::install'],
   }
 
 }

@@ -11,5 +11,7 @@ the web interface on port 8091 once the daemon is running.
 
 ## Examples
 
-    include couchbase::server
+```puppet
+include '::couchbase::server'
+```
 

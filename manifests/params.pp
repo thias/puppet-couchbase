@@ -9,8 +9,8 @@
 #  include couchbase::params
 #
 class couchbase::params {
-  $rpmbasename = 'couchbase-server-community_x86_64_1.8.0'
-  $rpmbaseurl  = 'http://packages.couchbase.com/releases/1.8.0'
+  $rpmbasename = 'couchbase-server-community-3.0.1-centos6.x86_64.rpm'
+  $rpmbaseurl  = 'http://packages.couchbase.com/releases/3.0.1'
   $basedir     = '/opt/couchbase'
 }
 
