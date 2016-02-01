@@ -1,3 +1,4 @@
+#### 2015-05-12 - 0.1.2
 * Include facts for presence, version and release.
 * Replace Modulefile with metadata.json.
 
