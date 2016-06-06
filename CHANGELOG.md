@@ -1,3 +1,7 @@
+#### 2016-06-06 - 0.2.0
+* Remove Gentoo support instead of spending time on updating it.
+* New `type` parameter to support Community and Enterprise editions.
+
 #### 2015-05-12 - 0.1.2
 * Include facts for presence, version and release.
 * Replace Modulefile with metadata.json.
