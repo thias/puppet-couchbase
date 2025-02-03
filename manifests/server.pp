@@ -1,10 +1,8 @@
 # Install a Couchbase Server
 #
 class couchbase::server (
-  $type = 'community',
+  Enum['community','enterprise','unknown'] $type = 'community',
 ) {
-
-  validate_re($type, [ '^community$', '^enterprise$', '^unknown$' ])
 
   if $type == 'unknown' {
     package { 'couchbase-server':

@@ -1,3 +1,5 @@
+* Remove legacy facts usage.
+
 #### 2016-06-06 - 0.2.0
 * Remove Gentoo support instead of spending time on updating it.
 * New `type` parameter to support Community and Enterprise editions.
